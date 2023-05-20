@@ -50,6 +50,15 @@ nav {
   animation: entering 5s;
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  text-decoration: none;
+  margin-bottom: 64px;
+}
+
 .image-container {
   display: flex;
   flex-direction: column;
@@ -67,6 +76,11 @@ nav {
 .image-container h1 {
   font-size: 2rem;
   color: #eaeaea;
+}
+
+.image-container h2 {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.254);
 }
 
 .image-container img {
@@ -95,6 +109,16 @@ nav {
   line-height: 28px;
 }
 
+.pedro-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+
+  border: 4px solid transparent;
+  background: linear-gradient(#eade30, #da1118, #d61a8e) padding-box,
+    linear-gradient(260deg, #eade30, #da1118, #d61a8e) border-box;
+}
+
 aside {
   grid-area: profile;
 
@@ -115,14 +139,15 @@ aside {
   animation: entering 5s;
 }
 
-aside img:nth-child(2) {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+aside img {
+  object-fit: cover;
+  border-radius: 8px;
 
-  border: 4px solid transparent;
-  background: linear-gradient(#eade30, #da1118, #d61a8e) padding-box,
-    linear-gradient(260deg, #eade30, #da1118, #d61a8e) border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+aside:hover img {
+  transform: scale(1.1);
 }
 
 aside p {
